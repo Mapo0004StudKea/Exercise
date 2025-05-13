@@ -1,10 +1,22 @@
 <!doctype html>
-<html>
-    <head>
-        <script src="main.js"></script>
-        <link rel="stylesheet" href="main.css">
-    </head>
-    <body>
-        <h4 class="hello-world">Hello World</h4>
-    </body>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>Vejr Information</title>
+    <script src="main.js" defer></script>
+    <!-- bruger tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans p-6 bg-gray-100 text-gray-900">
+    <h1 class="text-3xl font-bold mb-4">Weather Information</h1>
+
+    <label for="locationSelect" class="block text-lg font-medium mb-2">Select Location(s):</label>
+    <div id="dropdownContainer" class="mb-6">
+        <select id="locationSelect" multiple class="w-60 h-32 border border-gray-300 rounded p-2 bg-stone-100 shadow">
+            <!-- Options indsættes med JS -->
+        </select>
+    </div>
+    <!--  til visning af tiles -->
+    <div id="weatherContainer" class="flex flex-wrap gap-4"></div>
+</body>
 </html>
